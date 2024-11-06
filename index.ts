@@ -2,8 +2,8 @@ import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 import * as awsx from "@pulumi/awsx";
 
-// Create an AWS resource (S3 Bucket)
-const bucket = new aws.s3.BucketV2("my-bucket");
+const buckets = ["bucket1", "bucket2", "bucket3"]
 
-// Export the name of the bucket
-export const bucketName = bucket.id;
+const bucketsIds = buckets.map(bucket => new aws.s3.BucketV2(bucket).id)
+
+export const bucketName = bucketsIds;

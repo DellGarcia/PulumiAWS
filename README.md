@@ -20,10 +20,19 @@ O Pulumi oferece suporte a muitas das linguagens populares como:
 
 ## Como funciona o Pulumi (Project and Stack)
 
-O Pulumi é organizado em Project e Stacks 
+Um projeto Pulumi trabalha com um conceito de Stacks, uma Stack é uma instancia do projeto, permitindo criar diversos ambientes com configurações diferentes e mante-los sincronizados.
 
-O Pulumi funciona de forma declarativa ele avalia o que existe no script e compara com o estado atual 
+![alt text](assets/structure.png)
 
 ### Estados e Planos (Plan and States)
 
+O Pulumi funciona de forma declarativa ele avalia o que existe no script e compara com o estado atual (State), com isso ele formula um plano (Plan) e apresenta ao desenvolvedor que pode avaliar se as alterações estão corretas ou se precisam de algum ajuste.
+Isso é bem interessante, pois deixa claro o que vai mudar e evita alterações indesejadas.
+
+![alt text](assets/plan.png)
+
 ### Pulumi Cloud
+
+Pulumi Cloud funciona como um repositório remoto de forma semelhante ao Github, onde diferentes pessoas podem contribuir em um mesmo projeto onde tudo fica registrado e pode ser melhor gerenciado.
+
+![alt text](assets/pulumi_cloud.png)
